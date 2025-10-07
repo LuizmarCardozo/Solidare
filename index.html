@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Solidare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-container">
+
+        <header class="logo-area">
+            <img src="assets/IMG/logo.png" alt="Logo Solidare" class="logo-img">
+        </header>
+
+        <main class="login-card">
+            <form id="login-form">
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="E-Mail" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Senha" required>
+                </div>
+                
+                <a href="#" class="forgot-password">Esqueci a Senha?</a>
+                
+                <button type="submit" class="login-button">Entrar</button>
+            </form>
+        </main>
+        
+        <div class="separator">
+            <span>ou</span>
+        </div>
+
+        <div class="social-login">
+            <button class="social-btn google">
+                <img src="/assets/IMG/google.png" alt="Google">
+            </button>
+            <button class="social-btn apple">
+                <img src="/assets/IMG/apple.png" alt="Apple">
+            </button>
+            <button class="social-btn facebook">
+                <img src="/assets/IMG/facebook.png" alt="Facebook">
+            </button>
+        </div>
+
+        <footer class="signup-area">
+            <p>Doador novo? <a href="tipo-conta.html">Cadastre-se</a></p>
+        </footer>
+
+    </div>
+
+    <!-- Scripts do Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <!-- Adicionado o SDK de Autenticação, necessário para login/cadastro -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

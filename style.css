@@ -1,0 +1,203 @@
+/* --- Configurações Globais e Fundo --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(160deg, #e0f7fa 0%, #ffffff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* --- Container Principal --- */
+.main-container {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* --- Área do Logo --- */
+.logo-area {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-img {
+    width: 200px;
+    height: auto;
+}
+
+.logo-area h1 {
+    font-size: 2.5em;
+    color: #0077B6; /* Um tom de azul sólido */
+    font-weight: 700;
+}
+
+/* --- Cartão Principal --- */
+.login-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 25px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* --- Grupo de Inputs (Login/Cadastro) --- */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #cce7ff;
+    border-radius: 12px;
+    font-size: 1em;
+    font-family: 'Nunito', sans-serif;
+}
+
+.input-group input::placeholder {
+    color: #90a4ae;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-bottom: 20px;
+    font-size: 0.85em;
+    color: #0077B6;
+    text-decoration: none;
+}
+
+.login-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background-color: #00B4D8;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #0096C7;
+}
+
+/* --- Separador "ou" --- */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #90a4ae;
+    width: 100%;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.separator span {
+    padding: 0 15px;
+}
+
+/* --- Login Social --- */
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-btn {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.social-btn:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.social-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+/* --- Área de Rodapé (Login/Cadastro) --- */
+.signup-area {
+    text-align: center;
+    color: #546e7a;
+}
+
+.signup-area a {
+    color: #00B4D8;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* --- NOVOS ESTILOS PARA A TELA DE TIPO DE CONTA --- */
+.account-type-selector {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.account-type-btn {
+    background-color: #00B4D8;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 180, 216, 0.3);
+}
+
+.account-type-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 180, 216, 0.4);
+}
+
+.account-type-btn .icon-wrapper {
+    margin-bottom: 10px;
+}

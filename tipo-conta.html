@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo de Conta - Solidare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-container">
+
+        <header class="logo-area">
+            <img src="/assets/IMG/logo.png" alt="Logo Solidare" class="logo-img">
+        </header>
+
+        <main class="login-card text-center">
+            <h2 class="card-title">Escolha seu tipo de conta</h2>
+            
+            <div class="account-type-selector">
+                <!-- O link para a página de cadastro de doador -->
+                <a href="cadastro_doador.html" class="account-type-btn">
+                    <div class="icon-wrapper">
+                        <!-- Ícone de usuário (SVG para não depender de imagem externa) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>
+                    </div>
+                    <span>Doador</span>
+                </a>
+
+                <!-- O link agora aponta para a página de cadastro de ONG -->
+                <a href="cadastro_ong.html" class="account-type-btn">
+                     <div class="icon-wrapper">
+                        <!-- Ícone de casa com coração (SVG) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-house-heart-fill" viewBox="0 0 16 16">
+                           <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 5.207 1.354 11.854a.5.5 0 1 1-.708-.708L7.293 1.5Z"/>
+                           <path d="m14 9.293-6-6-6 6V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9.293Zm-6.003 2.455a.5.5 0 0 1 .707 0l1.06 1.06c.27.27.27.708 0 .978l-1.06 1.06a.5.5 0 0 1-.707 0L6.94 13.788a.5.5 0 0 1 0-.978l1.06-1.06Z"/>
+                        </svg>
+                    </div>
+                    <span>ONG</span>
+                </a>
+            </div>
+        </main>
+
+        <footer class="signup-area">
+            <p>Já tem uma conta? <a href="index.html">Faça login</a></p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
