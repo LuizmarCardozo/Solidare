@@ -1,0 +1,163 @@
+/* 1. Reset Básico e Layout da Página */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Impede a PÁGINA inteira de dar scroll */
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8; /* Um cinza/azul bem claro de fundo */
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* 100% da altura da janela */
+}
+
+/* 2. Cabeçalho Superior */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    flex-shrink: 0; /* Impede o header de encolher */
+}
+
+.back-button {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.filter-button {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* 3. Área de Conteúdo Principal (Rolável) */
+.content-area {
+    flex-grow: 1; /* Faz esta área ocupar todo o espaço restante */
+    overflow-y: auto; /* ADICIONA SCROLL VERTICAL */
+    -webkit-overflow-scrolling: touch; /* Scroll suave no iOS */
+    padding: 15px;
+}
+
+/* 4. Card de Doação */
+.donation-card {
+    display: flex; /* Divide em colunas (info | visual) */
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px; /* Cantos arredondados */
+    margin-bottom: 15px;
+    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* 4a. Coluna da Esquerda (Informações) */
+.card-info {
+    flex-grow: 1; /* Ocupa o máximo de espaço possível */
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.card-info p {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.tags-container {
+    margin-bottom: 10px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #e7f3ff; /* Fundo azul claro para tags */
+    color: #0069d9; /* Texto azul escuro */
+    border: 1px solid #b8d6f3;
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 11px;
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+.details {
+    font-size: 12px !important; /* !important para sobrepor a regra anterior */
+    color: #777 !important;
+    margin: 2px 0 !important;
+}
+
+
+/* 4b. Coluna da Direita (Visual) */
+.card-visual {
+    flex-shrink: 0; /* Impede de encolher */
+    width: 100px; /* Largura fixa para a coluna da imagem */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Espaça a imagem do texto/botão */
+}
+
+.card-visual img {
+    width: 100%;
+    height: 80px; /* Altura fixa para a imagem */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.location-text {
+    font-size: 10px;
+    color: #666;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.receipt-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.receipt-button span {
+    margin-top: 2px;
+}
+
+
+.receipt-button img {
+    width: 24px;  /* Define a largura do ícone */
+    height: 24px; /* Define a altura do ícone */
+    object-fit: contain; /* Garante que a imagem caiba sem distorcer */
+    
+    /* --- DOCUMENTAÇÃO DA CORREÇÃO ---
+      Estas regras dizem ao navegador para NÃO suavizar (anti-alias)
+      a imagem ao redimensioná-la. Isto mantém os ícones de
+      pixel art nítidos e definidos, como na tua imagem original.
+    */
+    image-rendering: -moz-crisp-edges; /* Para Firefox */
+    image-rendering: crisp-edges;       /* Para navegadores modernos (exceto Firefox) */
+    image-rendering: pixelated;       /* Para a maioria dos navegadores (padrão preferido) */
+}

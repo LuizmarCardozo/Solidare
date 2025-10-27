@@ -1,64 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- ============== CABEÇALHO DO DOCUMENTO ============== -->
+    <!-- Define a codificação de caracteres para UTF-8, que suporta acentos e símbolos -->
     <meta charset="UTF-8">
+    <!-- Garante que a página seja responsiva e se ajuste ao tamanho da tela de qualquer dispositivo -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título que aparece na aba do navegador -->
     <title>Login - Solidare</title>
+
+    <!-- ============== ESTILOS E FONTES ============== -->
+    <!-- Link para o arquivo de estilos CSS externo -->
     <link rel="stylesheet" href="style.css">
+    <!-- Links para importar a fonte "Nunito" do Google Fonts, para um visual mais moderno -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- ============== CONTAINER PRINCIPAL ============== -->
+    <!-- Este div envolve todo o conteúdo da página, ajudando a centralizá-lo e organizá-lo -->
     <div class="main-container">
 
+        <!-- ============== SEÇÃO DO LOGO ============== -->
         <header class="logo-area">
+            <!-- Imagem do logo da aplicação -->
             <img src="assets/IMG/logo.png" alt="Logo Solidare" class="logo-img">
         </header>
 
+        <!-- ============== SEÇÃO PRINCIPAL (CARTÃO DE LOGIN) ============== -->
         <main class="login-card">
+            <!-- Formulário de login que captura os dados do usuário -->
             <form id="login-form">
+                <!-- Grupo de input para o e-mail -->
                 <div class="input-group">
                     <input type="email" id="email" placeholder="E-Mail" required>
                 </div>
+                <!-- Grupo de input para a senha -->
                 <div class="input-group">
                     <input type="password" id="password" placeholder="Senha" required>
                 </div>
                 
+                <!-- Link para a funcionalidade de recuperação de senha (ainda não implementado) -->
                 <a href="#" class="forgot-password">Esqueci a Senha?</a>
                 
+                <!-- Botão para submeter o formulário de login -->
                 <button type="submit" class="login-button">Entrar</button>
             </form>
         </main>
         
+        <!-- ============== SEPARADOR "OU" ============== -->
+        <!-- Divisória visual para separar o login tradicional do login social -->
         <div class="separator">
             <span>ou</span>
         </div>
 
+        <!-- ============== SEÇÃO DE LOGIN SOCIAL ============== -->
         <div class="social-login">
+            <!-- Botão para login com Google -->
             <button class="social-btn google">
                 <img src="/assets/IMG/google.png" alt="Google">
             </button>
+            <!-- Botão para login com Apple -->
             <button class="social-btn apple">
                 <img src="/assets/IMG/apple.png" alt="Apple">
             </button>
+            <!-- Botão para login com Facebook -->
             <button class="social-btn facebook">
                 <img src="/assets/IMG/facebook.png" alt="Facebook">
             </button>
         </div>
 
+        <!-- ============== RODAPÉ (LINK PARA CADASTRO) ============== -->
         <footer class="signup-area">
+            <!-- Texto e link para direcionar novos usuários à página de seleção de tipo de conta -->
             <p>Doador novo? <a href="tipo-conta.html">Cadastre-se</a></p>
         </footer>
 
     </div>
 
-    <!-- Scripts do Firebase -->
+    <!-- ============== SCRIPTS DO FIREBASE E DA APLICAÇÃO ============== -->
+    <!-- A ordem dos scripts é importante! Primeiro carregamos as bibliotecas do Firebase e depois o nosso script. -->
+
+    <!-- SDK principal do Firebase - sempre necessário -->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <!-- Adicionado o SDK de Autenticação, necessário para login/cadastro -->
+    
+    <!-- SDK de Autenticação - necessário para login, cadastro e gerenciamento de usuários -->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    
+    <!-- SDK do Firestore - necessário para interagir com o banco de dados -->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    
+    <!-- Nosso arquivo de script personalizado, que contém toda a lógica da página -->
     <script src="script.js"></script>
 </body>
 </html>
